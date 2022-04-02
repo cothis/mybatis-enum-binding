@@ -1,6 +1,7 @@
 package com.cothis.mybatisenum.repository;
 
 import com.cothis.mybatisenum.config.HikariConfig;
+import com.cothis.mybatisenum.config.MyBatisConfig;
 import com.cothis.mybatisenum.domain.Order;
 import com.cothis.mybatisenum.domain.OrderStatus;
 import lombok.extern.slf4j.Slf4j;
@@ -12,8 +13,7 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.context.annotation.Import;
 
 @MybatisTest
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-@Import({HikariConfig.class})
+@Import({HikariConfig.class, MyBatisConfig.class})
 @Slf4j
 class OrderMapperTest {
 

@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
-import org.apache.ibatis.type.MappedTypes;
 
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
@@ -13,7 +12,6 @@ import java.sql.SQLException;
 import java.util.Arrays;
 
 @RequiredArgsConstructor
-@MappedTypes(EnumCode.class)
 @Slf4j
 public class EnumCodeHandler<E extends Enum<E>> extends BaseTypeHandler<EnumCode> {
 

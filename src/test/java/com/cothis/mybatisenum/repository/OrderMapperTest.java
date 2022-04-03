@@ -1,6 +1,5 @@
 package com.cothis.mybatisenum.repository;
 
-import com.cothis.mybatisenum.config.HikariConfig;
 import com.cothis.mybatisenum.config.MyBatisConfig;
 import com.cothis.mybatisenum.domain.Order;
 import com.cothis.mybatisenum.domain.OrderStatus;
@@ -9,11 +8,10 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.context.annotation.Import;
 
 @MybatisTest
-@Import({HikariConfig.class, MyBatisConfig.class})
+@Import({MyBatisConfig.class})
 @Slf4j
 class OrderMapperTest {
 
